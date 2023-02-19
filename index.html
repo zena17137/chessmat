@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<style>
+
+		.chess-div {
+			width: 400px;
+			height: 400px;
+			outline: 1px solid black;
+		}
+
+		.chess-new {
+			width: 50px;
+			height: 50px;
+			float: left;
+		}
+
+		.black {
+			background: #000;
+		}
+
+	</style>
+</head>
+<body>
+
+	<div class="chess-div"></div>
+
+	<script>
+
+		(function chessShow() {
+			let chess = document.querySelector('.chess-div')
+			let num = 0;
+
+			for (let i = 0; i < 8; i++) {
+				for (let j = 0; j < 8; j++) {
+					if (num % 2 == 0) {
+						chess.innerHTML += `<div class="chess-new"></div>`;
+					} else {
+						chess.innerHTML += `<div class="chess-new black"></div>`;
+					}
+
+					num++;
+				}
+				num++;
+			}
+		})()
+
+	</script>
+
+</body>
+</html>
